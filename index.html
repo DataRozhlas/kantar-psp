@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/7.2.2/highcharts.js" integrity="sha512-sYAnmpNKTJz8xm4GBRk/dblXZC8k8MLJKmGQovDbPgPrZTtTwGOw2QitwA39oT/49SwQ1JUN7ttI6rmjxNfxLw==" crossorigin="anonymous"></script>
+
+<div id="kantar-graf"></div>
+
+<script>
+    Highcharts.chart('kantar-graf', {
+        title: {
+            text: 'Volební model do sněmovny'
+        },
+        subtitle: {
+            text: 'agentur Kantar'
+        },
+        colors: ['#a6cee3','#1f78b4','#b2df8a','#33a02c','#fb9a99','#e31a1c','#fdbf6f','#ff7f00','#cab2d6','#6a3d9a'],
+        yAxis: {
+            title: {
+                text: 'volební zisk v %'
+            }
+        },
+        credits: {
+            enabled: false,
+        },
+        xAxis: {
+            categories: ['leden', 'únor', 'březen', 'duben', 'květen', 'červen', 'červenec', 'srpen', 'září']
+        },
+        tooltip: {
+            shared: true,
+            valueSuffix: ' %'
+        },
+        plotOptions: {
+            series: {
+                marker: {
+                    enabled: false,
+                    symbol: 'circle'
+                }
+        }
+        },
+        series: [{
+            name: 'ANO',
+            data: [30, 31, 34.5, 34, 31.5, 32, 27.5, 27.5, 24.5]
+        }, {
+            name: 'Piráti',
+            data: [16.5, 15.5, 13.5, 16, 17, 18, 19.5, 19.5, 19]
+        }, {
+            name: 'ODS',
+            data: [12.5, 13, 14, 11.5, 13.5, 13, 15, 15, 13.5]
+        }, {
+            name: 'SPD',
+            data: [7.5, 6.5, 5.5, 7, 8, 5.5, 8, 8, 8]
+        }, {
+            name: 'ČSSD',
+            data: [5, 5.5, 6, 5.5, 5.5, 5, 5.5, 5.5, 4]
+        }, {
+            name: 'STAN',
+            data: [5, 6.5, 5.5, 5.5, 5.5, 6, 6.5, 6.5, 9.5]
+        }, {
+            name: 'TOP 09',
+            data: [5.5, 5.5, 5.5, 6.5, 5, 5.5, 5, 5, 5.5]
+        }, {
+            name: 'KSČM',
+            data: [6.5, 4.5, 5.5, 5.5, 5, 5.5, 4.5, 4.5, 4.5]
+        }, {
+            name: 'KDU-ČSL',
+            data: [5, 5, 4.5, 4, 4, 4.5, 4, 4, 6]
+        }, {
+            name: 'Trikolóra',
+            data: [2.5, 3, 2.5, 2.5, 2, 3, 2.5, 2.5, 3],
+        }],
+    });
+</script>

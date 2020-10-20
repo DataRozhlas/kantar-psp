@@ -31,6 +31,15 @@
         },
         plotOptions: {
             series: {
+                zoneAxis: 'x',
+                zones: [{
+                    value: 5,
+                    dashStyle: undefined,
+                }, {
+                    value: 7,
+                    dashStyle: 'dash'
+                }],
+                connectNulls: true,
                 marker: {
                     enabled: false,
                     symbol: 'circle'
